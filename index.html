@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!-- The new doctype -->
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/main.css">
+ <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet" type="text/css" />
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="js/index.js"></script>
+ </head>
+<body>
+
+<div class="header">
+  <a href="#default" class="logo">Luxury Hotel</a>
+  <div class="header-right">
+    <a class="active" href="#home">Home</a>
+    <a href="rooms.php">Rooms</a>
+    <a href="about.php">About</a>
+    <a href="contact.php">Contact</a>
+  </div>
+</div>
+<div class="container">
+    <div>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">Welcome</div>
+              <img src="image/index-background.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">Welcome 2</div>
+              <img src="image/index-room.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">Welcome  3</div>
+              <img src="image/index-swimming.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+             <div class="centered">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+            <button class="btn">Button</button> <button class="btn2">Button</button>
+      </div>
+        <div class="dateRangeDiv">
+            <div class="rowDateRange">
+                <div class="columnDateRangeDiv1">
+                    <h4 class="dateRangeH4">Check-in:</h4>
+                  <p><input type="text" value="Check-in date" id="from" name="from" onclick="this.value=''" onblur="this.value='Check-in date'"/></p>
+                </div>
+                <div class="columnDateRangeDiv2">
+                  <h4 class="dateRangeH4">Check-out:</h4>
+                  <p><input type="text" value="Check-out date" id="to" name="to" onclick="this.value=''" onblur="this.value='Check-out date'"/></p>
+                </div>
+                <div class="columnDateRangeDiv3">
+                    <h4 class="dateRangeH4">Adults<br>(16+)</h4>
+                    <div class="select-style">
+                      <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="columnDateRangeDiv4">
+                    <h4 class="dateRangeH4">Children<br>(0 - 16)</h4>
+                    <div class="select-style">
+                        <select>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="columnDateRangeDiv5">
+                  <p><button class="button">Search</button></p>
+                </div>
+              </div>
+        </div>
+        <div class="reward">This is Reward Section</div>
+        <hr>
+        <div class="blog">This is Blog Section</div>
+        <hr>
+        <div class="footer">
+           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+       </div>
+        <script src="js/slide.js"></script>
+</div>
+</body>
+</html>
+
