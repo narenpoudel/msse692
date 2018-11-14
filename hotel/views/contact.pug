@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="style.css")
+        link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+        link(rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        link(rel="stylesheet" href="https://resources/demos/style.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        script(src="https://code.jquery.com/jquery-1.12.4.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        title MS in Softwar Engineering Practicum One (MSSE 630)
+    body
+        .navbar.navbar-default
+            .container
+                .navbar-header
+                    h2 Hotel Mountain
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="#") About Us
+                    li
+                        a(href="/rooms") Rooms
+                    li
+                        a(href="#") Services
+                    li
+                        a(href="#") Gallery
+                    li
+                        a(href="#") Mystic Diaries
+                    li
+                        a(href="/contact") Contact Us
+                    li
+                        a(href="#") Book Now
+        .container-fluid.contact
+            .contact_banner
+                h2 Contact Us
+        .container-fluid.contact_info
+            .left_banner_contact
+                .hotel_information
+                    h2 Hotel Information
+                    p
+                        | Be a spectator of the brilliant landscape that defines Colorado which is the Himalayas which you can chance upon from our location.
+                .hotel_location
+                    h2 Hotel Location
+                    p
+                        i.material-icons 
+                        span.address 10580 pecos st, Denver, CO 80260
+                    p
+                        i.material-icons 
+                        span.address 720-270-270
+                    p
+                        i.material-icons 
+                        span.address info@hotelmountain.com
+                .social_media
+                    h2 Social Media
+                    span
+                        a.fb_icon(href="#")
+                            i.fa 
+                        a.twitter_icon(href="#" target="_blank")
+                            i.fa 
+            .right_banner_contact
+                .contact_form
+                    form(action = "/contact", method = "POST")
+                            if result === true
+                                h3 Message Sent!
+                            .form-group
+                                label(for="name") Name:
+                                input#name.form-control(type="text" placeholder="Enter Name" name="name")
+                            .form-group
+                                label(for="email") Email:
+                                input#email.form-control(type="email" placeholder="Enter email" name="email")
+                            .form-group
+                                label(for="phone") Phone:
+                                input#phone.form-control(type="phone" placeholder="Enter Phone Number" name="phone")
+                            .form-group
+                                label(for="comment") Message:
+                                textarea#comment.form-control(rows="5" name="msg")
+                            button.btn.btn-default.contact_btn(type="submit" onclick="contactFormFunction()") Submit

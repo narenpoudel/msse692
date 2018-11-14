@@ -1,0 +1,71 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/style.css")
+        link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+        link(rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        link(rel="stylesheet" href="https://resources/demos/style.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        script(src="https://code.jquery.com/jquery-1.12.4.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        title MS in Softwar Engineering Practicum One (MSSE 630)
+    body
+        .navbar.navbar-default
+            .container
+                .navbar-header
+                    h2 Hotel Mountain
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="#") About Us
+                    li
+                        a(href="/rooms") Rooms
+                    li
+                        a(href="#") Services
+                    li
+                        a(href="#") Gallery
+                    li
+                        a(href="#") Mystic Diaries
+                    li
+                        a(href="/contact") Contact Us
+                    li
+                        a(href="/login/type/3") Book Now
+        .container-fluid.deluxe_room
+            .room_banner
+                h2 Rooms / Super Deluxe
+        .container.room_list
+            .room_list_img
+                img.img-thumbnail(src="/img/rooms/super-delux.jpg" alt="Deluxe Room")
+            .room_list_desc
+                h2 Super Deluxe Room
+                p
+                    | Every room faces the breathtaking view of the Himalayas and has a balcony terrace to enjoy the view and soak up some sun. Breathe in the fresh air and enjoy the greenery. Some of the rooms even have a private garden to relax in your own small piece of heaven.
+                .room_amenities
+                    .room_left_amenities
+                        .minibar
+                            i.fa(style="font-size:24px") 
+                            | Mini Bar
+                        .flat_tv
+                            i.fa(style="font-size:24px") 
+                            | Flat Screen TV
+                        .ac_unit
+                            i.material-icons ac_unit
+                            | AC Unit
+                    .room_right_amenities
+                        .free_wifi
+                            i.material-icons  wifi
+                            | Free Wifi
+                        .spa
+                            i.material-icons  spa
+                            | Free Spa
+                        .breakfast
+                            i.material-icons fastfood
+                            | Free Breakfast
+            a.btn.btn-primary.book_now(href="/registration/type/3") Book Now

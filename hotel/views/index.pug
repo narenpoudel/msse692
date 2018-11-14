@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" type="text/css" href="/style.css")
+        link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+        link(rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        // link rel="stylesheet" href="https://resources/demos/style.css"
+        script(src="https://code.jquery.com/jquery-1.12.4.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        title MS in Softwar Engineering Practicum One (MSSE 630)
+    body
+        .navbar.navbar-default
+            .container
+                .navbar-header
+                    h2 Hotel Mountain
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="#") About Us
+                    li
+                        a(href="/rooms") Rooms
+                    li
+                        a(href="#") Services
+                    li
+                        a(href="#") Gallery
+                    li
+                        a(href="#") Mystic Diaries
+                    li
+                        a(href="/contact") Contact Us
+                    li
+                        a(href="#") Book Now
+        .w3-content.w3-display-container
+            .w3-display-container.mySlides
+                img(src="/img/1.jpg" style="width:100%")
+                .w3-display-bottomleft.w3-large.w3-container.w3-padding-16.w3-black
+                    h2 Hotel Mountain
+                    p
+                        | Being in the midst of glorious surroundings, make sure that you always take care of yourself as luxurious as you can.
+            .w3-display-container.mySlides
+                img(src="/img/2.png" style="width:100%")
+                .w3-display-bottomleft.w3-large.w3-container.w3-padding-16.w3-black
+                    h2 Magical Place
+                    p
+                        | You can always enjoy life’s beautiful scenery when you are in our location. It will always be a rest stop for those who wander to seek beauty everywhere.
+            .w3-display-container.mySlides
+                img(src="/img/3.jpg" style="width:100%")
+                .w3-display-bottomleft.w3-large.w3-container.w3-padding-16.w3-black
+                    h2 Special Offer!!!
+                    p 25% Discount on Spa and  15% Discount on Food & Beverage.
+            .check_availability
+                    form(action = "/", method = "POST")
+                        form.form-inline(role="form")
+                            label.mb-2.mr-sm-2(for="from") Check In:
+                            input#from.form-control.mb-2.mr-sm-2(type="text" name="from" onclick="this.value=''")
+                            label.mb-2.mr-sm-2(for="to") Check Out:
+                            input#to.form-control.mb-2.mr-sm-2(type="text" name="to" onclick="this.value=''")
+                            button.availability_btn(type='submit') Check Availability
+        button.w3-button.w3-display-left.w3-black(onclick="plusDivs(-1)") ❮
+        button.w3-button.w3-display-right.w3-black(onclick="plusDivs(1)") ❯
+        each result in resultset
+           .container.home_list
+                .room_list_home
+                    img.img-thumbnail(src="/img/rooms/"+result.room_image_name   alt=result.tbl_room_type.room_type_name)
+                .room_info
+                    h2 #{result.tbl_room_type.room_type_name}
+                    .home_left
+                        p Room Capacity: #{result.tbl_room_type.room_capacity}
+                        p Room Floor: #{result.room_floor}
+                        p Rate includes : #{result.tbl_discount.discount_percent}% discount!
+                    .home_right
+                        p Room Rates Exclusive of Tax: USD #{result.tbl_room_price.room_price_amt} per room / per night
+                        p Facilities :  #{result.room_add_info}
+                a.deluxe_details_btn(href="/type/"+result.tbl_room_type.room_type_id) View Details
+        script(src="/js/hotel.js")

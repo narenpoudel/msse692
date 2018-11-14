@@ -1,0 +1,74 @@
+html
+    body
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
+        // jQuery library
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        // Popper JS
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
+        // Latest compiled JavaScript
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
+        script(src="https://code.jquery.com/jquery-1.12.4.js")
+        script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+        link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+        link(rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+        link(rel="stylesheet" href="https://resources/demos/style.css")
+        link(rel="stylesheet" href="style.css")
+        // ---- Include the above in your HEAD tag -------
+    form(action = "/confirm", method = "POST")
+        section.login-block
+            .container
+                .row
+                    .col-md-4.login-sec
+                        h2.text-center Book Now
+                        form.login-form
+                            .form-group
+                                label.text-uppercase Full Name:
+                                |
+                                label.text #{req.body.fullname}
+                            .form-group
+                                label.text-uppercase Address:
+                                |
+                                label.text #{req.body.address}
+                            .form-group
+                                label.mb-2.mr-sm-2 Check In:
+                                |
+                                label.text #{req.body.from}
+                            .form-group
+                                label.mb-2.mr-sm-2 Check Out:
+                                |
+                                label.text #{req.body.to}
+                                input(type="hidden" name="fullname" value=req.body.fullname)
+                                input(type="hidden" name="address" value=req.body.address)
+                                input(type="hidden" name="from" value=req.body.from)
+                                input(type="hidden" name="to" value=req.body.to)
+                                input(type="hidden" name="type" value=req.body.type)
+                                input(type="hidden" name="finalConfirm" value=1)
+                            button.btn.btn-primary.float-right(type="submit") Confirm Now
+                    .col-md-8.banner-sec
+                        #carouselExampleIndicators.carousel.slide(data-ride="carousel")
+                            ol.carousel-indicators
+                                li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+                                li(data-target="#carouselExampleIndicators" data-slide-to="1")
+                                li(data-target="#carouselExampleIndicators" data-slide-to="2")
+                            .carousel-inner(role="listbox")
+                                .carousel-item.active
+                                    img.d-block.img-fluid(src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide")
+                                    .carousel-caption.d-none.d-md-block
+                                        .banner-text
+                                            h2 Welcome to Mountain Hotel
+                                            p
+                                                | Every room faces the breathtaking view of the Himalayas and has a balcony terrace to enjoy the view and soak up some sun. Breathe in the fresh air and enjoy the greenery. Some of the rooms even have a private garden to relax in your own small piece of heaven.
+                                .carousel-item
+                                    img.d-block.img-fluid(src="https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg" alt="First slide")
+                                    .carousel-caption.d-none.d-md-block
+                                        .banner-text
+                                            h2 Welcome to Mountain Hotel
+                                            p
+                                                | Every room faces the breathtaking view of the Himalayas and has a balcony terrace to enjoy the view and soak up some sun. Breathe in the fresh air and enjoy the greenery. Some of the rooms even have a private garden to relax in your own small piece of heaven.
+                                .carousel-item
+                                    img.d-block.img-fluid(src="https://images.pexels.com/photos/872957/pexels-photo-872957.jpeg" alt="First slide")
+                                    .carousel-caption.d-none.d-md-block
+                                        .banner-text
+                                            h2 Welcome to Mountain Hotel
+                                            p
+                                                | Every room faces the breathtaking view of the Himalayas and has a balcony terrace to enjoy the view and soak up some sun. Breathe in the fresh air and enjoy the greenery. Some of the rooms even have a private garden to relax in your own small piece of heaven.
