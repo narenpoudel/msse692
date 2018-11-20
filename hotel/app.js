@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 
 
 //Hotel Reservation DB
-mongoose.connect('mongodb://localhost/hotel_reservation');
+//mongoose.connect('mongodb://localhost/hotel_reservation');
+
+mongoose.connect('mongodb://root:root123@ds151809.mlab.com:51809/heroku_4h2s8bvw');
 let db = mongoose.connection;
 
 
@@ -313,6 +315,10 @@ app.post('/confirm', function (req, res) {
 
 
 //Start Server
-app.listen(3000,function () {
-    console.log('Server started at port 3000');
+//app.listen(3000,function () {
+    //console.log('Server started at port 3000');
+//})
+
+app.listen(51809,function () {
+    console.log('Server started at port 51809');
 })
