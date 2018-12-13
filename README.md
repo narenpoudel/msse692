@@ -1,3 +1,1 @@
-# MSSE- 692 && MSSE - 697
-
-Hotel Reservation App uning Node.js + Mongo DB
+# Hotel Reservation App uning Node.js + Heroku Mongo DB + AWS
